@@ -13,7 +13,7 @@ toint = lambda n: n(lambda x: x+1)(0) # <= converts a Lambda numeral to Python I
 add = lambda m, n: m(increment)(n) # returns the sum of two numerals
 subtract = lambda m, n: n(decrement)(m) # returns the difference of two numerals
 multiply = lambda m, n: m(lambda x: add(n,x))(zero)
-exponent = lambda m, n: n(lambda x: multiply(m,x))(increment(zero))
+exponent = lambda m, n: n(lambda x: multiply(m,x))(to_int(zero))
 square = lambda n: exponent(n,increment(increment(zero)))
 
 # Predicates
